@@ -1,7 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+const config = process.env;
 export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
+  app: {
+    head: {
+      title: config.NUXT_PUBLIC_PLATFORM_NAME,
+    },
+  },
   runtimeConfig: {
     public: {
       platformName: "",

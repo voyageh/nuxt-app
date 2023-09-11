@@ -58,9 +58,6 @@ const platformName = runtimeConfig.public.platformName;
     display: flex;
     flex-direction: column;
 
-    :deep(.scroll-box) {
-      background-color: #2b303b;
-    }
     .logo-box {
       color: #fff;
       background-color: #2b303b;
@@ -101,6 +98,14 @@ const platformName = runtimeConfig.public.platformName;
           opacity: 1;
           transform: scale(1);
         }
+      }
+    }
+
+    :deep(.scroll-box) {
+      background-color: #2b303b;
+
+      .ul-menu {
+        border-right: none;
       }
     }
   }
