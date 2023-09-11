@@ -1,6 +1,6 @@
 <template>
   <div class="error-page">
-    <div class="img-box" />
+    <div class="img-box" :class="`img-${error.statusCode}`" />
     <p class="error-message">{{ error?.message }}</p>
     <el-button class="back-box" type="primary" @click="goBack">返回</el-button>
   </div>
@@ -40,7 +40,13 @@ const goBack = () => {
   .img-box {
     width: 100%;
     height: 50vh;
+  }
+  .img-404 {
     background: url("~/assets/images/404.svg") no-repeat center/contain;
+  }
+
+  .img-500 {
+    background: url("~/assets/images/500.svg") no-repeat center/contain;
   }
 
   .error-message {
